@@ -1,4 +1,4 @@
-package ru.geekbrains.androidhw5;
+package ru.geekbrains.androidhw6;
 
 import androidx.appcompat.app.AppCompatActivity;
 
