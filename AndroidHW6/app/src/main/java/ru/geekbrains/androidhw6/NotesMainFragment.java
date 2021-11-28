@@ -22,33 +22,13 @@ import com.google.android.material.button.MaterialButton;
  */
 public class NotesMainFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
     public NotesMainFragment() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment NotesMainFragment.
-     */
-    // TODO: Rename and change types and number of parameters
     public static NotesMainFragment newInstance(String param1, String param2) {
         NotesMainFragment fragment = new NotesMainFragment();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
     }
@@ -56,10 +36,6 @@ public class NotesMainFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
     }
 
     @Override
@@ -70,11 +46,12 @@ public class NotesMainFragment extends Fragment {
         MaterialButton addNoteBtn = view.findViewById(R.id.add_new_note_button);
         addNoteBtn.setOnClickListener(v -> {
             NoteFragment noteFragment = NoteFragment.newInstance();
-            FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
-            FragmentTransaction transaction = fragmentManager.beginTransaction();
-            transaction.replace(R.id.main_notes_container, noteFragment);
-            transaction.addToBackStack("");
-            transaction.commit();
+            requireActivity()
+                    .getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.main_notes_container, noteFragment)
+                    .addToBackStack("")
+                    .commit();
         });
         return view;
     }
