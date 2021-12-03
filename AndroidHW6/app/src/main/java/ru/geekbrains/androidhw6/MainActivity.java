@@ -4,8 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import ru.geekbrains.androidhw6.fragments.NotesMainFragment;
-
 public class MainActivity extends AppCompatActivity {
 
     @Override
