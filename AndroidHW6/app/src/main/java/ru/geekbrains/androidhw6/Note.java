@@ -1,4 +1,4 @@
-package ru.geekbrains.androidhw6.model;
+package ru.geekbrains.androidhw6;
 
 import android.os.Parcel;
 import android.os.Parcelable;
