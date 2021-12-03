@@ -7,4 +7,8 @@
     <string name="this_is_a_title">This is a title</string>
     <string name="some_text">This is a first note in the note application. Have a good day!</string>
     <string name="note_title">Note Title</string>
+    <string name="about_message">This is Note application created by Zmeevsky Dmitry</string>
+    <string name="exit">Exit</string>
+    <string name="about">About</string>
+    <string name="header">Header</string>
 </resources>
