@@ -11,4 +11,6 @@
     <string name="exit">Exit</string>
     <string name="about">About</string>
     <string name="header">Header</string>
+    <string name="nav_drawer_open">drawer open</string>
+    <string name="nav_drawer_close">drawer close</string>
 </resources>
