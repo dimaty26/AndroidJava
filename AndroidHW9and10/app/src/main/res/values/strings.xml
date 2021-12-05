@@ -6,4 +6,18 @@
     <string name="header">Notes App</string>
     <string name="about">About</string>
     <string name="exit">Exit</string>
+
+    <!-- Notes Data !-->
+    <string name="title1">Thoughts</string>
+    <string name="title2">Favorite Films</string>
+    <string name="title3">Music</string>
+    <string name="title4">Investments</string>
+    <string name="title5">Bus stops</string>
+    <string name="title6">Watch</string>
+    <string name="description1">Life is good. But good life is better.</string>
+    <string name="description2">Forrest Gump. Interstellar.</string>
+    <string name="description3">Dj Khaled</string>
+    <string name="description4">FXIT. FXCH.</string>
+    <string name="description5">Moscow Bus Stop</string>
+    <string name="description6">Casio. Rolex.</string>
 </resources>

@@ -2,4 +2,6 @@
 <resources>
     <dimen name="about_text_size">32sp</dimen>
     <dimen name="header_size">32sp</dimen>
+    <dimen name="radius">15dp</dimen>
+    <dimen name="elevation">3dp</dimen>
 </resources>

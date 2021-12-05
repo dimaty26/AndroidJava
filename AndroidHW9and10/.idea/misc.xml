@@ -3,9 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Java Online Courses/GeekBrains/Second quarter/AndroidJava/AndroidHW9and10/app/src/main/res/drawable/separator.xml" value="0.11666666666666667" />
         <entry key="..\:/Java Online Courses/GeekBrains/Second quarter/AndroidJava/AndroidHW9and10/app/src/main/res/layout/activity_main.xml" value="0.23822463768115942" />
+        <entry key="..\:/Java Online Courses/GeekBrains/Second quarter/AndroidJava/AndroidHW9and10/app/src/main/res/layout/content_main.xml" value="0.1" />
         <entry key="..\:/Java Online Courses/GeekBrains/Second quarter/AndroidJava/AndroidHW9and10/app/src/main/res/layout/drawer_header.xml" value="0.23822463768115942" />
         <entry key="..\:/Java Online Courses/GeekBrains/Second quarter/AndroidJava/AndroidHW9and10/app/src/main/res/layout/fragment_about.xml" value="0.23822463768115942" />
+        <entry key="..\:/Java Online Courses/GeekBrains/Second quarter/AndroidJava/AndroidHW9and10/app/src/main/res/layout/note_item.xml" value="0.2" />
+        <entry key="..\:/Java Online Courses/GeekBrains/Second quarter/AndroidJava/AndroidHW9and10/app/src/main/res/layout/notes_fragment.xml" value="0.1" />
         <entry key="..\:/Java Online Courses/GeekBrains/Second quarter/AndroidJava/AndroidHW9and10/app/src/main/res/menu/drawer_menu.xml" value="0.25416666666666665" />
       </map>
     </option>
