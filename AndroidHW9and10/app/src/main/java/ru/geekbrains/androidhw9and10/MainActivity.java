@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
     private void openAlertExitDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
         builder.setTitle(R.string.exit);
-        builder.setMessage("Do you really want to exit?");
+        builder.setMessage(R.string.question_on_exit);
         builder.setCancelable(false);
         builder.setPositiveButton("Yes", (dialogInterface, i) -> finish());
         builder.setNegativeButton("No", (dialogInterface, i) -> dialogInterface.dismiss());

@@ -20,4 +20,5 @@
     <string name="description4">FXIT. FXCH.</string>
     <string name="description5">Moscow Bus Stop</string>
     <string name="description6">Casio. Rolex.</string>
+    <string name="question_on_exit">Do you really want to exit?</string>
 </resources>
