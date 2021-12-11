@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">AndroidHW9and10</string>
+    <string name="app_name">Notes Application</string>
+    <string name="navigation_drawer_open">open</string>
+    <string name="navigation_drawer_close">close</string>
+    <string name="about_content">This is a Notes Application created by Dmitry Zmeevsky</string>
+    <string name="header">Notes App</string>
+    <string name="about">About</string>
+    <string name="exit">Exit</string>
 </resources>
