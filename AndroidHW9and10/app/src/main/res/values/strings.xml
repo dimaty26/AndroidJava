@@ -20,4 +20,11 @@
     <string name="description4">FXIT. FXCH.</string>
     <string name="description5">Moscow Bus Stop</string>
     <string name="description6">Casio. Rolex.</string>
+    <string name="question_on_exit">Do you really want to exit?</string>
+    <string name="add_new_note">Add New Note</string>
+    <string name="clear">Clear</string>
+    <string name="update_note">Update Note</string>
+    <string name="delete_note">Delete Note</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
 </resources>
