@@ -19,6 +19,12 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.HashMap;
+import java.util.Map;
+
 import ru.geekbrains.androidhw9and10.MainActivity;
 import ru.geekbrains.androidhw9and10.Navigation;
 import ru.geekbrains.androidhw9and10.R;
@@ -34,6 +40,9 @@ public class NotesFragment extends Fragment {
     private RecyclerView recyclerView;
     private Navigation navigation;
     private Publisher publisher;
+
+    private FirebaseDatabase db = FirebaseDatabase.getInstance("https://notes-application-5f3dd-default-rtdb.firebaseio.com/");
+    private DatabaseReference root = db.getReference().child("Notes");
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -62,6 +71,11 @@ public class NotesFragment extends Fragment {
                 navigation.addFragment(NoteFragment.newInstance(), true);
                 publisher.subscribe(note -> {
                     data.addNote(note);
+                    Map<String, String> map = new HashMap<>();
+                    map.put("title", note.getTitle());
+                    map.put("description", note.getContent());
+                    map.put("data", note.getDateCreated());
+                    root.push().setValue(map);
                     adapter.notifyItemInserted(data.size() - 1);
                 });
                 //addExampleNote();
