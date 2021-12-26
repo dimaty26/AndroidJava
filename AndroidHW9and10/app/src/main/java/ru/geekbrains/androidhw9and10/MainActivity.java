@@ -7,10 +7,14 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.navigation.NavigationView;
 
 import ru.geekbrains.androidhw9and10.fragments.AboutFragment;
+import ru.geekbrains.androidhw9and10.fragments.NotesFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,6 +24,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         initToolbar();
+        addFragment(new NotesFragment());
+    }
+
+    private void addFragment(Fragment fragment) {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        transaction.replace(R.id.fragment_container, fragment);
+        transaction.commit();
     }
 
     private void initToolbar() {
@@ -54,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
     private void openAlertExitDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
         builder.setTitle(R.string.exit);
-        builder.setMessage("Do you really want to exit?");
+        builder.setMessage(R.string.question_on_exit);
         builder.setCancelable(false);
         builder.setPositiveButton("Yes", (dialogInterface, i) -> finish());
         builder.setNegativeButton("No", (dialogInterface, i) -> dialogInterface.dismiss());
