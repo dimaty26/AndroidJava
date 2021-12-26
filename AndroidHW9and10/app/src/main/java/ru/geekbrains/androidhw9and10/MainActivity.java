@@ -15,15 +15,21 @@ import com.google.android.material.navigation.NavigationView;
 
 import ru.geekbrains.androidhw9and10.fragments.AboutFragment;
 import ru.geekbrains.androidhw9and10.fragments.NotesFragment;
+import ru.geekbrains.androidhw9and10.observe.Publisher;
 
 public class MainActivity extends AppCompatActivity {
+
+    private Navigation navigation;
+    private Publisher publisher = new Publisher();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        navigation = new Navigation(getSupportFragmentManager());
         initToolbar();
+        getNavigation().addFragment(new NotesFragment(), false);
         addFragment(new NotesFragment());
     }
 
@@ -63,6 +69,12 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
+    }
+
     private void openAlertExitDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
         builder.setTitle(R.string.exit);
@@ -79,5 +91,13 @@ public class MainActivity extends AppCompatActivity {
                 .addToBackStack("")
                 .replace(R.id.fragment_container, new AboutFragment())
                 .commit();
+    }
+
+    public Navigation getNavigation() {
+        return navigation;
+    }
+
+    public Publisher getPublisher() {
+        return publisher;
     }
 }
